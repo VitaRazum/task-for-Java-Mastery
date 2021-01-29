@@ -20,28 +20,30 @@ public class EmployeeController {
         List<Employee> allEmployees = employeeService.getAllEmployees();
         return allEmployees;
     }
+
     @GetMapping("/employees/{employeeId}")
-    public Employee getEmployee(@PathVariable int employeeId){
+    public Employee getEmployee(@PathVariable long employeeId) {
         Employee employee = employeeService.getEmployee(employeeId);
-       // if (employee==null){
-       //     throw new NoSuchEmployeeException("There is no employee with ID="+employeeId
-       //     +" in Database");
-       // }
+        // if (employee==null){
+        //     throw new NoSuchEmployeeException("There is no employee with ID="+employeeId
+        //     +" in Database");
+        // }
         return employee;
     }
 
     @PostMapping("/employees")
-    public void addNewEmployee(@RequestBody Employee employee){
+    public void addNewEmployee(@RequestBody Employee employee) {
+
         employeeService.saveEmployee(employee);
     }
 
     @PutMapping("/employees")
-    public void updateEmployee(@RequestBody Employee employee){
+    public void updateEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
     }
 
     @DeleteMapping("/employees/{employeeId}")
-    public void deleteEmployee(@PathVariable int employeeId){
+    public void deleteEmployee(@PathVariable long employeeId) {
         employeeService.deleteEmployee(employeeId);
     }
 }

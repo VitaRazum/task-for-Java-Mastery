@@ -3,27 +3,27 @@ package com.mastery.java.task.dto;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="employee_id")
-    private int employeeId;
+    @Column(name = "employee_id")
+    private long employeeId;
 
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name="department_id")
+    @Column(name = "department_id")
     private int departmentId;
 
     @Column(name = "job_title")
     private String jobTitle;
 
-    @Column(name ="gender")
-    private String gender;
+    @Column(name = "gender")
+    private Gender gender;
 
     @Column(name = "date_of_birth")
     private String dateOfBirth;
@@ -31,20 +31,21 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, int departmentId, String jobTitle, String gender, String dateOfBirth) {
+/*    public Employee(String firstName, String lastName, int departmentId, String jobTitle, Gender  gender, String dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.departmentId = departmentId;
         this.jobTitle = jobTitle;
-        this.gender = gender;
+        this.gender = gender;       // !!!
+    //    this.gender = Gender.valueOf(gender);
         this.dateOfBirth = dateOfBirth;
-    }
+    }*/
 
-    public int getEmployeeId() {
+    public long getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(long employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -80,13 +81,24 @@ public class Employee {
         this.jobTitle = jobTitle;
     }
 
-    public String getGender() {
+/*    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
+    }*/
+
+/*
+    public String getGender() {
+        return gender.toString();
     }
+
+    public void setGender(String gender) {
+        this.gender = Gender.valueOf(gender);
+    }
+*/
+
 
     public String getDateOfBirth() {
         return dateOfBirth;
