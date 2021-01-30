@@ -22,7 +22,9 @@ public class Employee {
     @Column(name = "job_title")
     private String jobTitle;
 
-    @Column(name = "gender")
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gender", columnDefinition="enum('MALE','FEMALE')")
     private Gender gender;
 
     @Column(name = "date_of_birth")
@@ -36,8 +38,7 @@ public class Employee {
         this.lastName = lastName;
         this.departmentId = departmentId;
         this.jobTitle = jobTitle;
-        this.gender = gender;       // !!!
-    //    this.gender = Gender.valueOf(gender);
+        this.gender = gender;
         this.dateOfBirth = dateOfBirth;
     }*/
 
@@ -81,24 +82,13 @@ public class Employee {
         this.jobTitle = jobTitle;
     }
 
-/*    public Gender getGender() {
+    public Gender getGender() {
         return gender;
     }
 
     public void setGender(Gender gender) {
         this.gender = gender;
-    }*/
-
-/*
-    public String getGender() {
-        return gender.toString();
     }
-
-    public void setGender(String gender) {
-        this.gender = Gender.valueOf(gender);
-    }
-*/
-
 
     public String getDateOfBirth() {
         return dateOfBirth;

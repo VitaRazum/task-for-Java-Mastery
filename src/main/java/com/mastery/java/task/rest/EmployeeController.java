@@ -46,4 +46,11 @@ public class EmployeeController {
     public void deleteEmployee(@PathVariable long employeeId) {
         employeeService.deleteEmployee(employeeId);
     }
+
+    @GetMapping("/employees/name/{name}")
+    public List<Employee> showAllEmployeeByName(@PathVariable String name) {
+        List<Employee> employees = employeeService.findAllByFirstName(name);
+        return employees;
+    }
+
 }

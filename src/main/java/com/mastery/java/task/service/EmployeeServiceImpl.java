@@ -40,5 +40,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeDao.deleteById(id);
     }
 
-
+    @Override
+    public List<Employee> findAllByFirstName(String firstName){
+        List<Employee> employees = employeeDao.findAllByFirstName(firstName);
+        return employees;
+    }
 }
