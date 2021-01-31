@@ -53,4 +53,9 @@ public class EmployeeController {
         return employees;
     }
 
+    @GetMapping("/employees/average-age")
+    public float calculateAverageAge() {
+        return employeeService.calculateAverageAge();
+    }
+
 }

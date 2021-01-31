@@ -5,13 +5,15 @@ import com.mastery.java.task.dto.Employee;
 import java.util.List;
 
 public interface EmployeeService {
-    public List<Employee> getAllEmployees();
+    List<Employee> getAllEmployees();
 
-    public void saveEmployee(Employee employee);
+    void saveEmployee(Employee employee);
 
-    public Employee getEmployee(long id);
+    Employee getEmployee(long id);
 
-    public void deleteEmployee(long id);
+    void deleteEmployee(long id);
 
-    public List<Employee> findAllByFirstName(String firstName);
+    List<Employee> findAllByFirstName(String firstName);
+
+    float calculateAverageAge();
 }

@@ -918,7 +918,7 @@ SELECT|sys.sys_config
     <table id="286" parent="3" name="employee"/>
     <column id="287" parent="286" name="employee_id">
       <Position>1</Position>
-      <DataType>int|0s</DataType>
+      <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
@@ -940,7 +940,7 @@ SELECT|sys.sys_config
     </column>
     <column id="292" parent="286" name="gender">
       <Position>6</Position>
-      <DataType>varchar(10)|0s</DataType>
+      <DataType>enum(&apos;MALE&apos;, &apos;FEMALE&apos;)|0e</DataType>
     </column>
     <column id="293" parent="286" name="date_of_birth">
       <Position>7</Position>

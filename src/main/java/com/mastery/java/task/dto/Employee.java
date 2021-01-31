@@ -33,14 +33,14 @@ public class Employee {
     public Employee() {
     }
 
-/*    public Employee(String firstName, String lastName, int departmentId, String jobTitle, Gender  gender, String dateOfBirth) {
+    public Employee(String firstName, String lastName, int departmentId, String jobTitle, Gender  gender, String dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.departmentId = departmentId;
         this.jobTitle = jobTitle;
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
-    }*/
+    }
 
     public long getEmployeeId() {
         return employeeId;
